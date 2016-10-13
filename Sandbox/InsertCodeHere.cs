@@ -23,6 +23,17 @@ namespace Sandbox
 
 
             // YOUR JOB: Add code to calculate the correct change
+            while (changeToPayBack >= 100)
+            {
+                noOf100krBills = noOf100krBills + 1;
+                changeToPayBack = changeToPayBack - 100;
+            }
+            while (changeToPayBack >= 10)
+            {
+                noOf10krCoins = noOf10krCoins + 1;
+                changeToPayBack = changeToPayBack - 10;
+            }
+            noOf1krCoins = changeToPayBack;
 
 
             Console.WriteLine("Your change is {0} 1-kr coins, {1} 10-kr coins and {2} 100-kr bills", noOf1krCoins, noOf10krCoins, noOf100krBills);
